@@ -1,0 +1,18 @@
+<!doctype html>
+<html class="brand-root" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{default title page.basename}}</title>
+    <meta name="description" content="{{description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">{{#if typekit.id}}
+        <script type="text/javascript" src="//{{typekit.host}}/{{typekit.id}}.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    {{/if}}
+    {{{css styles}}}
+</head>
+<body class="text layout">
+    {{> body }}
+    {{{js scripts}}}
+</body>
+</html>

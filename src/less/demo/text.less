@@ -1,0 +1,24 @@
+//imports
+@import "../utility/config";
+//defaults
+@text-family:sans-serif;
+@text-stops: 6;
+//define
+.root();
+.text {
+  font-family: @text-family;
+  .root-font-size(100%);
+  .tk-variation(regular);
+}
+
+.text-space(@f) {
+  padding: (1ex * @f) (1em * @f);
+}
+//inline
+.loop-mix-in(@selector, @index, @from, @to) when(@selector = '.text') {
+  &--space-x@{index} {
+    .text-space(@index);
+  }
+}
+
+.loop(0, @text-stops, '.text');

@@ -1,0 +1,36 @@
+{
+  "name": "warp",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tappily/warp",
+  "authors": [
+    "tappily"
+  ],
+  "description": "",
+  "main": "dist/js/warp.js",
+  "keywords": [
+    "javascript",
+    "canjs",
+    "handlebars"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".*/",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "almond": "",
+    "canjs": "",
+    "loopless": "",
+    "rootless": "",
+    "requirejs-i18n": "",
+    "requirejs-text": "",
+    "jquery": "",
+    "jquerypp-release": "",
+    "normalize-css": "",
+    "sylvester": "~0.1.3"
+  }
+}

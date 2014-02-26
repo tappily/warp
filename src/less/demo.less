@@ -1,0 +1,47 @@
+// import modules
+@import "demo/text";
+@import "demo/layout";
+@import "demo/brand";
+//defualts
+@menu-item-margin: 1rem;
+//define
+.demo {
+  &-menu {
+    ol {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      li {
+        display: block;
+        position: fixed;
+
+        &:nth-child(1) {
+          top: @menu-item-margin;
+          left: @menu-item-margin;
+        }
+        &:nth-child(2) {
+          top: @menu-item-margin;
+          right: @menu-item-margin;
+        }
+        &:nth-child(3) {
+          bottom: @menu-item-margin;
+          right: @menu-item-margin;
+        }
+        &:nth-child(4) {
+          bottom: @menu-item-margin;
+          left: @menu-item-margin;
+        }
+      }
+    }
+  }
+
+  &-corner {
+    input {
+      max-width: 2em;
+    }
+  }
+}

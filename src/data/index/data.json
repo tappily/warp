@@ -1,0 +1,6 @@
+{
+    "title": "Warp",
+    "description": "",
+    "scripts": ["index.js"],
+    "styles": ["index.css"]
+}

@@ -1,0 +1,35 @@
+{
+    "figure": {
+        "matrix": {
+            "style": ""
+        }
+    },
+    "menu": {
+        "items": [
+            {
+                "style": {
+                    "top": "0",
+                    "left": "0"
+                }
+            },
+            {
+                "style": {
+                    "top": "0",
+                    "left": "0"
+                }
+            },
+            {
+                "style": {
+                    "top": "0",
+                    "left": "0"
+                }
+            },
+            {
+                "style": {
+                    "top": "0",
+                    "left": "0"
+                }
+            }
+        ]
+    }
+}
