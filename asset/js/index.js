@@ -23180,7 +23180,6 @@ define('warp/corner/control',["can/control", "can-touch"], function(control, tou
                 y = t / this.origin.height() * 100;
 
             this.options.model.attr("vector", [x, y]);
-            console.log(arguments);
         }
     });
 });
