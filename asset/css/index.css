@@ -408,6 +408,26 @@ table {
     border-spacing: 0;
 }
 
+.warp {
+  position: relative;
+  -webkit-perspective: 1024px;
+  -ms-perspective: 1024px;
+  perspective: 1024px;
+}
+.warp figure {
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.warp figure:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  display: block;
+  -webkit-box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.5), inset 0 0 0 -1px #ffffff;
+  box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.5), inset 0 0 0 -1px #ffffff;
+}
 .warp menu {
   position: absolute;
   margin: 0;
@@ -477,19 +497,6 @@ html {
   padding: 6ex 6em;
 }
 .layout {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   min-height: 100vh;
 }
 .header {
@@ -521,34 +528,6 @@ html {
   background-color: #00a4e4;
   color: #000000;
 }
-.demo-menu ol {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.demo-menu ol li {
-  display: block;
-  position: fixed;
-}
-.demo-menu ol li:nth-child(1) {
-  top: 1rem;
-  left: 1rem;
-}
-.demo-menu ol li:nth-child(2) {
-  top: 1rem;
-  right: 1rem;
-}
-.demo-menu ol li:nth-child(3) {
-  bottom: 1rem;
-  right: 1rem;
-}
-.demo-menu ol li:nth-child(4) {
-  bottom: 1rem;
-  left: 1rem;
-}
-.demo-corner input {
-  max-width: 2em;
+.warp {
+  min-height: 800px;
 }
