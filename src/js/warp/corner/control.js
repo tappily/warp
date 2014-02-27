@@ -21,7 +21,6 @@ define(["can/control", "can-touch"], function(control, touch) {
                 y = t / this.origin.height() * 100;
 
             this.options.model.attr("vector", [x, y]);
-            console.log(arguments);
         }
     });
 });
