@@ -1,0 +1,107 @@
+html {
+  font-size: 100%;
+}
+.text {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+}
+.text--space-x0 {
+  padding: 0ex 0em;
+}
+.text--space-x1 {
+  padding: 1ex 1em;
+}
+.text--space-x2 {
+  padding: 2ex 2em;
+}
+.text--space-x3 {
+  padding: 3ex 3em;
+}
+.text--space-x4 {
+  padding: 4ex 4em;
+}
+.text--space-x5 {
+  padding: 5ex 5em;
+}
+.text--space-x6 {
+  padding: 6ex 6em;
+}
+.layout {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.header {
+  padding: 1ex 1em;
+}
+.body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0ex 0em;
+}
+.content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1ex 1em;
+}
+.footer {
+  height: 3rem;
+  padding: 1ex 1em;
+}
+.brand-root {
+  background-color: #ffffff;
+  color: #000000;
+}
+.demo-menu ol {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.demo-menu ol li {
+  display: block;
+  position: fixed;
+}
+.demo-menu ol li:nth-child(1) {
+  top: 1rem;
+  left: 1rem;
+}
+.demo-menu ol li:nth-child(2) {
+  top: 1rem;
+  right: 1rem;
+}
+.demo-menu ol li:nth-child(3) {
+  bottom: 1rem;
+  right: 1rem;
+}
+.demo-menu ol li:nth-child(4) {
+  bottom: 1rem;
+  left: 1rem;
+}
+.demo-corner input {
+  max-width: 2em;
+}
