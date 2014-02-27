@@ -1,5 +1,6 @@
-define(["can/control", "can/map", "sylvester"], function (control, Map, $) {
+define(["can", "can/control", "can/map", "sylvester", "warp/corner/control"], function (can, control, Map, $, Control) {
     "use strict";
+
     return control.extend({
         defaults: {
             scope: null,
@@ -7,15 +8,13 @@ define(["can/control", "can/map", "sylvester"], function (control, Map, $) {
         }
     }, {
         init: function() {
+            this.corners = [];
             this.element.html("").append(this.options.template(this.options.scope));
-            this.options.scope.attr("figure.style", "background-color: green; height: 500px");
+            can.each(this.options.scope.attr("figure.corners"), can.proxy(function(e) {
+                this.corners.push(new Control(window.document.getElementById(e.attr("id")), {
+                    model: e
+                }));
+            }, this));
         },
-        "{scope} change": function() {
-            console.log(arguments);
-        },
-        "menu li click": function(el, ev) {
-
-            //el.css({ top: ev.pageY+"px", left: ev.pageX+"px"});
-        }
     });
 });
