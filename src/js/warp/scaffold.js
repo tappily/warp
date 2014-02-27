@@ -15,6 +15,8 @@ define(["can", "can/control", "can/map", "sylvester", "warp/corner/control"], fu
                     model: e
                 }));
             }, this));
-        },
+            this.options.scope.attr("figure.style", "height:500px");
+            console.log(this.options.scope.attr("figure.corners"));
+        }
     });
 });

@@ -3,6 +3,9 @@
 @scaffold-fill: white;
 @scaffold-anchor-size: 1rem;
 @scaffold-color: contrast(@scaffold-fill);
+@warp-scaffold-grid-x: round((100 / 3 * 1%), 4);
+@warp-scaffold-grid-y: round((100 / 3 * 1%), 4);
+@warp-scaffold-grid-line-width: 1px;
 //define
 .warp {
   position: relative;
@@ -11,13 +14,48 @@
   figure {
     transform-style: preserve-3d;
 
-    &:before {
+    //scaffold
+    /*&:before {
       width: 100%;
       height: 100%;
       position: absolute;
       content: "";
       display: block;
-      box-shadow: inset 0 0 0 3px rgba(0,0,0,.5), inset 0 0 0 -1px rgb(255,255,255);
+
+      @line: @warp-scaffold-grid-line-width;
+      @line-adj: (@warp-scaffold-grid-line-width / -2);
+      background-image: linear-gradient(to bottom, rgb(255,255,255) @line, transparent @line),
+      linear-gradient(to right, rgb(255,255,255) @line, transparent @line);
+      background-size: @warp-scaffold-grid-x @warp-scaffold-grid-y;
+    }
+    */
+
+    box-shadow: inset 0 0 0 1px @scaffold-fill, inset 0 0 0 2px fade(@scaffold-color, 25%), 0 0 0 1px fade(@scaffold-color, 25%);
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+    }
+
+    @rail-fill: fade(@scaffold-fill, 65%);
+
+    &:before {
+      width: @warp-scaffold-grid-x;
+      height: 100%;
+      top: 0;
+      left: @warp-scaffold-grid-x;
+      border-left: 1px solid @rail-fill;
+      border-right: 1px solid @rail-fill;
+    }
+
+    &:after {
+      width: 100%;
+      height: @warp-scaffold-grid-x;
+      top: @warp-scaffold-grid-x;
+      left: 0;
+      border-top: 1px solid @rail-fill;
+      border-bottom: 1px solid @rail-fill;
     }
   }
 
@@ -38,7 +76,7 @@
         display: block;
         background-color: @scaffold-color;
         border-radius: (@scaffold-anchor-size/2);
-        box-shadow: inset 0 0 0 .4rem fade(@scaffold-fill, 85%), inset 0 0 0 .1rem @scaffold-fill;
+        box-shadow: inset 0 0 0 .4rem fade(@scaffold-fill, 85%), inset 0 0 0 .1rem @scaffold-fill, 0 0 .4rem .1rem fade(@scaffold-color, 35%);
         position: absolute;
         top: 50%;
         left: 50%;
