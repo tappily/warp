@@ -5,9 +5,20 @@
 @scaffold-color: contrast(@scaffold-fill);
 //define
 .warp {
+  position: relative;
+  perspective: 1024px;
 
   figure {
+    transform-style: preserve-3d;
 
+    &:before {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      content: "";
+      display: block;
+      box-shadow: inset 0 0 0 3px rgba(0,0,0,.5), inset 0 0 0 -1px rgb(255,255,255);
+    }
   }
 
   menu {
