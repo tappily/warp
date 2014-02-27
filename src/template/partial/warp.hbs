@@ -1,11 +1,4 @@
 <section class="warp">
-    <br>
-    <br>
-    <br>
-    <p>matrix3d({{figure.matrix.style}})</p>
-    <figure style="-moz-transform:matrix3d({{figure.matrix.style}});-webkit-transform:matrix3d({{figure.matrix.style}});
-                   -o-transform:matrix3d({{figure.matrix.style}}); -ms-transform:matrix3d({{figure.matrix.style}});
-                   transform:matrix3d({{figure.matrix.style}});"></figure>
-    <menu><ol>{{#each menu.items}}
-        <li style="{{#each style}}{{@key}}:{{.}};{{/each}}">{{.}}</li>{{/each}}</ol></menu>
+    <figure style="{{figure.style}}"></figure>
+    <menu>{{#each figure.corners}}<label style="{{style}}"><input type="range"/>{{id}}</label>{{/each}}</menu>
 </section>

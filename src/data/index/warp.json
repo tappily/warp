@@ -1,35 +1,28 @@
 {
     "figure": {
-        "matrix": {
-            "style": ""
-        }
-    },
-    "menu": {
-        "items": [
+        "corners": [
             {
-                "style": {
-                    "top": "0",
-                    "left": "0"
-                }
+                "id": "corner-1",
+                "vector": [10,10,1],
+                "style": "left:10%;top:10%;"
             },
             {
-                "style": {
-                    "top": "0",
-                    "left": "0"
-                }
+                "id": "corner-2",
+                "vector": [30,10,1],
+                "style": "left:30%;top:10%;"
             },
             {
-                "style": {
-                    "top": "0",
-                    "left": "0"
-                }
+                "id": "corner-3",
+                "vector": [30,30,1],
+                "style": "left:30%;top:30%;"
             },
             {
-                "style": {
-                    "top": "0",
-                    "left": "0"
-                }
+                "id": "corner-4",
+                "vector": [10,30,1],
+                "style": "left:10%;top:30%;"
             }
-        ]
+        ],
+        "style": "",
+        "matrix": {}
     }
 }

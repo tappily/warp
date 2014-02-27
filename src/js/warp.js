@@ -1,5 +1,5 @@
 define(["can/view/mustache", "requirejs-text!../template/partial/warp.hbs",
-    "warp/scaffold", "can/map"], function (can, template, Scaffold, Map) {
+    "warp/scaffold", "warp/map"], function (can, template, Scaffold, Map) {
 
     "use strict";
 

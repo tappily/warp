@@ -1,4 +1,4 @@
-define(["can/control", "can/map", "can/map/list", "sylvester"], function (control, Map, List, $) {
+define(["can/control", "can/map", "sylvester"], function (control, Map, $) {
     "use strict";
     return control.extend({
         defaults: {
@@ -7,16 +7,15 @@ define(["can/control", "can/map", "can/map/list", "sylvester"], function (contro
         }
     }, {
         init: function() {
-            var id = $.Matrix.I(3);
-
-            var m = [].concat.apply([], [[1,0,0],[0,1,0],[0,0,1]]);
-
-            this.options.scope.attr("figure.matrix.style", m.toString());
-            console.log(this.options.scope);
             this.element.html("").append(this.options.template(this.options.scope));
+            this.options.scope.attr("figure.style", "background-color: green; height: 500px");
         },
         "{scope} change": function() {
             console.log(arguments);
+        },
+        "menu li click": function(el, ev) {
+
+            //el.css({ top: ev.pageY+"px", left: ev.pageX+"px"});
         }
     });
 });
