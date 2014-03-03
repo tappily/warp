@@ -1,0 +1,105 @@
+//defualts
+@imgrd-height: 100vh;
+@imgrd-width: 100vw;
+@imgrd-rows: 3;
+@imgrd-cells: 3;
+@imgrd-src: none;
+
+//define
+@imgrd-row-height: round((@imgrd-height / @imgrd-rows), 2);
+@imgrd-cell-width: round((@imgrd-width / @imgrd-cells), 2);
+
+.imgrd {
+  width: @imgrd-width;
+  height: @imgrd-height;
+  margin: 0;
+  padding: 0;
+  background-image: @imgrd-src;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &--z {
+    perspective: 1024px;
+
+    div {
+      transform-style: perserve-3d;
+      transition: transform .2s;
+    }
+  }
+
+  div {
+    display: block;
+    overflow: hidden;
+    width: @imgrd-cell-width;
+    height: @imgrd-row-height;
+    position: absolute;
+
+    &:before {
+      content: "";
+      width: @imgrd-width;
+      height: @imgrd-height;
+      display: block;
+      background-image: @imgrd-src;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    //cells
+    .imgrd-cell(1);
+    .imgrd-cell(2);
+    .imgrd-cell(3);
+
+    //rows
+    .imgrd-row(1);
+    .imgrd-row(2);
+    .imgrd-row(3);
+  }
+
+}
+
+.imgrd-row(@f) {
+
+  @row-index: (@f - 1);
+  @countdown: (@imgrd-rows - @f);
+  @all-cells: (@imgrd-cells * @imgrd-rows);
+  @cell-index: (@imgrd-cells * @row-index);
+  @nth: @all-cells - @cell-index;
+
+  &:nth-child(-n+@{nth}) {
+    top: (@imgrd-row-height * @countdown);
+
+    &:before{
+      background-position-y: (@imgrd-row-height * @countdown * -1);
+    }
+  }
+}
+
+.imgrd-cell(@f) {
+
+  @countdown: (@imgrd-cells - @f);
+
+  &:nth-child(@{imgrd-cells}n-@{countdown}) {
+
+    @index: (@f - 1);
+
+    left: (@imgrd-cell-width * @index);
+
+    &:before{
+      background-position-x: (@imgrd-cell-width * @index * -1);
+    }
+  }
+}
+
+.demo {
+  perspective: 1024px;
+
+  div {
+    transform-style: perserve-3d;
+    transition: transform .2s;
+
+    &:hover {
+      transform: rotatex(15deg);
+    }
+
+  }
+}
