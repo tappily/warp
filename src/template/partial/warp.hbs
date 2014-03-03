@@ -1,16 +1,6 @@
 <section class="warp">
     <figure class="imgrd imgrd--z">
-        <div></div>
-        <div></div>
-        <div></div>
-
-        <div></div>
-        <div {{figure.style}}></div>
-        <div></div>
-
-        <div></div>
-        <div></div>
-        <div></div>
+        {{#each figure.faces}}<div class="imgrd-item" style="{{style}}"></div>{{/each}}
     </figure>
     <menu>{{#each figure.corners}}<div id="{{id}}" style="{{style}}"></div>{{/each}}</menu>
 </section>

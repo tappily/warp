@@ -4,6 +4,8 @@
 @scaffold-fill: white;
 @scaffold-anchor-size: 1rem;
 @scaffold-color: contrast(@scaffold-fill);
+@warp-width: 100vw;
+@warp-height: 100vh;
 @warp-scaffold-grid-x: round((100 / 3 * 1%), 4);
 @warp-scaffold-grid-y: round((100 / 3 * 1%), 4);
 @warp-scaffold-grid-line-width: 1px;
@@ -11,6 +13,8 @@
 .warp {
   position: relative;
   perspective: 1024px;
+  height: @warp-height;
+  width: @warp-width;
 
   figure {
     transform-style: preserve-3d;

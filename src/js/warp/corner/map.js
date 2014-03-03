@@ -7,6 +7,9 @@ define(["can", "sylvester", "can/map/attributes", "can/map/delegate"], function(
             },
             "vector": function(raw) {
                 return new $.V(raw);
+            },
+            "index": function(raw) {
+                return raw;
             }
         }
     }, {

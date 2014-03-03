@@ -17,17 +17,11 @@
   background-image: @imgrd-src;
   background-size: cover;
   background-repeat: no-repeat;
+  perspective: 1200px;
 
-  &--z {
-    perspective: 1024px;
-
-    div {
-      transform-style: perserve-3d;
-      transition: transform .2s;
-    }
-  }
-
-  div {
+  &-item {
+    transform-style: perserve-3d;
+    transform-origin: 0 0;
     display: block;
     overflow: hidden;
     width: @imgrd-cell-width;
@@ -63,7 +57,7 @@
   @countdown: (@imgrd-rows - @f);
   @all-cells: (@imgrd-cells * @imgrd-rows);
   @cell-index: (@imgrd-cells * @row-index);
-  @nth: @all-cells - @cell-index;
+  @nth: (@all-cells - @cell-index);
 
   &:nth-child(-n+@{nth}) {
     top: (@imgrd-row-height * @countdown);
@@ -87,19 +81,5 @@
     &:before{
       background-position-x: (@imgrd-cell-width * @index * -1);
     }
-  }
-}
-
-.demo {
-  perspective: 1024px;
-
-  div {
-    transform-style: perserve-3d;
-    transition: transform .2s;
-
-    &:hover {
-      transform: rotatex(15deg);
-    }
-
   }
 }

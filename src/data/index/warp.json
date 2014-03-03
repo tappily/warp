@@ -1,25 +1,100 @@
 {
     "figure": {
+        "rows": 3,
+        "cols": 3,
+        "faces": [],
         "corners": [
             {
                 "id": "corner-1",
-                "vector": [10,10,1],
-                "style": "left:10%;top:10%;"
+                "vector": [33.33,33.33],
+                "style": "left:33.33%;top:33.3%;",
+                "vertices": [
+                    {
+                        "cell": 0,
+                        "vert": [0,0,1,0]
+                    },
+                    {
+                        "cell": 1,
+                        "vert": [0,0,0,1]
+                    },
+                    {
+                        "cell": 3,
+                        "vert": [0,1,0,0]
+                    },
+                    {
+                        "cell": 4,
+                        "vert": [1,0,0,0]
+                    }
+                ]
             },
             {
                 "id": "corner-2",
-                "vector": [30,10,1],
-                "style": "left:30%;top:10%;"
+                "vector": [66.66,33.33],
+                "style": "left:66.66%;top:33.33%;",
+                "vertices": [
+                    {
+                        "cell": 1,
+                        "vert": [0,0,1,0]
+                    },
+                    {
+                        "cell": 2,
+                        "vert": [0,0,0,1]
+                    },
+                    {
+                        "cell": 4,
+                        "vert": [0,1,0,0]
+                    },
+                    {
+                        "cell": 5,
+                        "vert": [1,0,0,0]
+                    }
+                ]
             },
             {
                 "id": "corner-3",
-                "vector": [30,30,1],
-                "style": "left:30%;top:30%;"
+                "vector": [66.66,66.66],
+                "style": "left:66.66%;top:66.66%;",
+                "vertices": [
+                    {
+                        "cell": 3,
+                        "vert": [0,0,1,0]
+                    },
+                    {
+                        "cell": 4,
+                        "vert": [0,0,0,1]
+                    },
+                    {
+                        "cell": 6,
+                        "vert": [0,1,0,0]
+                    },
+                    {
+                        "cell": 7,
+                        "vert": [1,0,0,0]
+                    }
+                ]
             },
             {
                 "id": "corner-4",
-                "vector": [10,30,1],
-                "style": "left:10%;top:30%;"
+                "vector": [33.33,66.66],
+                "style": "left:33.33%;top:66.66%;",
+                "vertices": [
+                    {
+                        "cell": 4,
+                        "vert": [0,0,1,0]
+                    },
+                    {
+                        "cell": 5,
+                        "vert": [0,0,0,1]
+                    },
+                    {
+                        "cell": 7,
+                        "vert": [0,1,0,0]
+                    },
+                    {
+                        "cell": 8,
+                        "vert": [1,0,0,0]
+                    }
+                ]
             }
         ],
         "style": "",
